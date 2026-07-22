@@ -12,7 +12,7 @@ pipeline{
         sudo mv apache-maven-3.9.12 /opt/maven
         sudo chown -R jenkins:jenkins /opt/maven
         /opt/maven/bin/mvn -version
-        ...
+        '''
         
       }
     }
