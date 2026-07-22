@@ -18,8 +18,23 @@ pipeline{
     }
     stage("Checkout Code"){
       steps{
-        git branch: 'main', url
+        git branch: 'main', url: 'https://github.com/sundar-s551/Test.git'
       }
+    }
+    stage("Build with maven"){
+      steps{
+        sh '/opt/maven/bin/mvn clean package -Dmaven.test.failure.ignore-true'
+      }
+    }
+  }
+  post{
+    success{
+      junit '**/target/surefire-reports/TEST-*.xml'
+      archiveArtifacts '/target/*.jar'
+      
+    }
+    failure{
+      echo "Build Failed"
     }
   }
 }
