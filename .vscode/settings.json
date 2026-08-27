@@ -1,0 +1,11 @@
+{
+    "zopeneditor.userbuild.enabled": true,
+    "zopeneditor.userbuild.alwaysShowCommands": false,
+    "zopeneditor.userbuild.userSettings": {
+        "dbbWorkspace": "/z/z84486/workspace",
+        "dbbHlq": "z84486.build",
+        "dbbLogDir": "/z/z84486/workspace/logs",
+        "dbbDefaultZappProfile": "dbb-userbuild",
+        "localLogDir": "/logs"
+    }
+}
