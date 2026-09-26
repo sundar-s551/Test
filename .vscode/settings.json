@@ -7,5 +7,6 @@
         "dbbLogDir": "/z/z84486/workspace/logs",
         "dbbDefaultZappProfile": "dbb-userbuild",
         "localLogDir": "/logs"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
