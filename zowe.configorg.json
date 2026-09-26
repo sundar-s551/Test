@@ -1,0 +1,63 @@
+{
+    "$schema": "./zowe.schema.json",
+    "profiles": {
+        "zosmf": {
+            "type": "zosmf",
+            "properties": {
+                "port": 10443
+            },
+            "secure": []
+        },
+        "tso": {
+            "type": "tso",
+            "properties": {
+                "account": "mainframe User ID",
+                "codePage": "1047",
+                "logonProcedure": "IZUFPROC"
+            },
+            "secure": []
+        },
+        "ssh": {
+            "type": "ssh",
+            "properties": {
+                "port": 22,
+                "host": "mainframe IP address",
+                "user": "mainframe User ID",
+                "privateKey": "local path to private key file"
+
+            },
+            "secure": []
+        },
+        "zftp": {
+            "type": "zftp",
+            "properties": {
+                "port": 21,
+                "secureFtp": true,
+                "host": "mainframe IP address"
+            },
+            "secure": []
+        },
+        "global_base": {
+            "type": "base",
+            "properties": {
+                "host": "204.90.115.200",
+                "rejectUnauthorized": false
+            }
+           
+        },
+        "cics": {
+            "type": "cics",
+            "properties": {}
+        }
+    },
+    "defaults": {
+        "zosmf": "zosmf",
+        "tso": "tso",
+        "ssh": "ssh",
+        "zftp": "zftp",
+        "cics": "cics",
+        "rse": "rse",
+        "base": "global_base"
+    },
+    "autoStore": false
+}
